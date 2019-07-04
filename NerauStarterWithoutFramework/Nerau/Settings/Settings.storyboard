@@ -239,22 +239,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fgq-Hh-X30">
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G4X-rQ-V5S">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Fgq-Hh-X30" firstAttribute="top" secondItem="3RG-cX-tUK" secondAttribute="top" id="QmC-Pv-taL"/>
-                            <constraint firstItem="Fgq-Hh-X30" firstAttribute="leading" secondItem="3RG-cX-tUK" secondAttribute="leading" id="W9k-Nh-0AV"/>
-                            <constraint firstItem="3RG-cX-tUK" firstAttribute="bottom" secondItem="Fgq-Hh-X30" secondAttribute="bottom" id="fsc-38-TUS"/>
-                            <constraint firstItem="3RG-cX-tUK" firstAttribute="trailing" secondItem="Fgq-Hh-X30" secondAttribute="trailing" id="hXb-9M-mR0"/>
+                            <constraint firstItem="3RG-cX-tUK" firstAttribute="bottom" secondItem="G4X-rQ-V5S" secondAttribute="bottom" id="AsF-YD-cCn"/>
+                            <constraint firstItem="3RG-cX-tUK" firstAttribute="trailing" secondItem="G4X-rQ-V5S" secondAttribute="trailing" id="m2O-0w-r7u"/>
+                            <constraint firstItem="G4X-rQ-V5S" firstAttribute="top" secondItem="3RG-cX-tUK" secondAttribute="top" id="vm9-qj-4bi"/>
+                            <constraint firstItem="G4X-rQ-V5S" firstAttribute="leading" secondItem="3RG-cX-tUK" secondAttribute="leading" id="wIo-Bz-LHi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3RG-cX-tUK"/>
                     </view>
                     <connections>
-                        <outlet property="webView" destination="Fgq-Hh-X30" id="rte-Ry-1ZD"/>
+                        <outlet property="webView" destination="G4X-rQ-V5S" id="WjT-KW-sFN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fLJ-aW-pcV" userLabel="First Responder" sceneMemberID="firstResponder"/>
