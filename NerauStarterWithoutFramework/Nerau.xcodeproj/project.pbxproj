@@ -36,6 +36,8 @@
 		4D7CF94F22B96899008C6F8A /* ResultTimeIntervalListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CF94E22B96899008C6F8A /* ResultTimeIntervalListController.swift */; };
 		4D7CF95122B974D1008C6F8A /* Result.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D7CF95022B974D1008C6F8A /* Result.storyboard */; };
 		4D9838BF22C7F86800A7251E /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9838BE22C7F86800A7251E /* SettingsController.swift */; };
+		E2EBBA8C22CE7AFC0075DD55 /* NerauAppKit.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = E2EBBA8522CE7AEC0075DD55 /* NerauAppKit.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E2EBBA9222CE7C5E0075DD55 /* Principal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EBBA9122CE7C5E0075DD55 /* Principal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 3B10AC4522B8EED800D835A4;
 			remoteInfo = Nerau;
+		};
+		E2EBBA8D22CE7AFC0075DD55 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B10AC3E22B8EED800D835A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2EBBA8422CE7AEC0075DD55;
+			remoteInfo = NerauAppKit;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -57,6 +66,17 @@
 			files = (
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2EBBA8F22CE7AFC0075DD55 /* Embed PlugIns */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E2EBBA8C22CE7AFC0075DD55 /* NerauAppKit.bundle in Embed PlugIns */,
+			);
+			name = "Embed PlugIns";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -97,6 +117,10 @@
 		4D7CF94E22B96899008C6F8A /* ResultTimeIntervalListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTimeIntervalListController.swift; sourceTree = "<group>"; };
 		4D7CF95022B974D1008C6F8A /* Result.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Result.storyboard; sourceTree = "<group>"; };
 		4D9838BE22C7F86800A7251E /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		E2EBBA8522CE7AEC0075DD55 /* NerauAppKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NerauAppKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2EBBA8722CE7AEC0075DD55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2EBBA9022CE7C5E0075DD55 /* NerauAppKit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NerauAppKit-Bridging-Header.h"; sourceTree = "<group>"; };
+		E2EBBA9122CE7C5E0075DD55 /* Principal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Principal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +132,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4D7CF93322B96010008C6F8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2EBBA8222CE7AEC0075DD55 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -136,7 +167,9 @@
 			children = (
 				3B10AC4822B8EED800D835A4 /* Nerau */,
 				4D7CF93C22B96010008C6F8A /* NerauModelTests */,
+				E2EBBA8622CE7AEC0075DD55 /* NerauAppKit */,
 				3B10AC4722B8EED800D835A4 /* Products */,
+				E2EBBA8B22CE7AFC0075DD55 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,6 +178,7 @@
 			children = (
 				3B10AC4622B8EED800D835A4 /* Nerau.app */,
 				4D7CF93622B96010008C6F8A /* NerauModelTests.xctest */,
+				E2EBBA8522CE7AEC0075DD55 /* NerauAppKit.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -238,6 +272,23 @@
 			path = NerauModelTests;
 			sourceTree = "<group>";
 		};
+		E2EBBA8622CE7AEC0075DD55 /* NerauAppKit */ = {
+			isa = PBXGroup;
+			children = (
+				E2EBBA8722CE7AEC0075DD55 /* Info.plist */,
+				E2EBBA9122CE7C5E0075DD55 /* Principal.swift */,
+				E2EBBA9022CE7C5E0075DD55 /* NerauAppKit-Bridging-Header.h */,
+			);
+			path = NerauAppKit;
+			sourceTree = "<group>";
+		};
+		E2EBBA8B22CE7AFC0075DD55 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -249,10 +300,12 @@
 				3B10AC4322B8EED800D835A4 /* Frameworks */,
 				3B10AC4422B8EED800D835A4 /* Resources */,
 				4D7CF94822B96010008C6F8A /* Embed Frameworks */,
+				E2EBBA8F22CE7AFC0075DD55 /* Embed PlugIns */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E2EBBA8E22CE7AFC0075DD55 /* PBXTargetDependency */,
 			);
 			name = Nerau;
 			productName = Nerau;
@@ -277,6 +330,23 @@
 			productReference = 4D7CF93622B96010008C6F8A /* NerauModelTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		E2EBBA8422CE7AEC0075DD55 /* NerauAppKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2EBBA8822CE7AEC0075DD55 /* Build configuration list for PBXNativeTarget "NerauAppKit" */;
+			buildPhases = (
+				E2EBBA8122CE7AEC0075DD55 /* Sources */,
+				E2EBBA8222CE7AEC0075DD55 /* Frameworks */,
+				E2EBBA8322CE7AEC0075DD55 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NerauAppKit;
+			productName = NerauAppKit;
+			productReference = E2EBBA8522CE7AEC0075DD55 /* NerauAppKit.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -293,6 +363,10 @@
 					4D7CF93522B96010008C6F8A = {
 						CreatedOnToolsVersion = 10.2;
 						TestTargetID = 3B10AC4522B8EED800D835A4;
+					};
+					E2EBBA8422CE7AEC0075DD55 = {
+						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 					};
 				};
 			};
@@ -311,6 +385,7 @@
 			targets = (
 				3B10AC4522B8EED800D835A4 /* Nerau */,
 				4D7CF93522B96010008C6F8A /* NerauModelTests */,
+				E2EBBA8422CE7AEC0075DD55 /* NerauAppKit */,
 			);
 		};
 /* End PBXProject section */
@@ -330,6 +405,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4D7CF93422B96010008C6F8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2EBBA8322CE7AEC0075DD55 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -376,6 +458,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E2EBBA8122CE7AEC0075DD55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2EBBA9222CE7C5E0075DD55 /* Principal.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -383,6 +473,11 @@
 			isa = PBXTargetDependency;
 			target = 3B10AC4522B8EED800D835A4 /* Nerau */;
 			targetProxy = 4D7CF93A22B96010008C6F8A /* PBXContainerItemProxy */;
+		};
+		E2EBBA8E22CE7AFC0075DD55 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2EBBA8422CE7AEC0075DD55 /* NerauAppKit */;
+			targetProxy = E2EBBA8D22CE7AFC0075DD55 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -616,6 +711,61 @@
 			};
 			name = Release;
 		};
+		E2EBBA8922CE7AEC0075DD55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = BQF78J8BF9;
+				INFOPLIST_FILE = NerauAppKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nonstrict.NerauAppKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "NerauAppKit/NerauAppKit-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		E2EBBA8A22CE7AEC0075DD55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = BQF78J8BF9;
+				INFOPLIST_FILE = NerauAppKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nonstrict.NerauAppKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "NerauAppKit/NerauAppKit-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -642,6 +792,15 @@
 			buildConfigurations = (
 				4D7CF94A22B96010008C6F8A /* Debug */,
 				4D7CF94B22B96010008C6F8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2EBBA8822CE7AEC0075DD55 /* Build configuration list for PBXNativeTarget "NerauAppKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2EBBA8922CE7AEC0075DD55 /* Debug */,
+				E2EBBA8A22CE7AEC0075DD55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

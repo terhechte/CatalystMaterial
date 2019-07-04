@@ -19,6 +19,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Database.shared.generateFakeData(number: 100)
         }
         Database.shared.errorDelegate = self
+
+        // Wait a second, so Window is on screen
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
+            // Load AppKit bundle and call a method
+            let pluginURL = Bundle.main.builtInPlugInsURL!.appendingPathComponent("NerauAppKit.bundle")
+            let plugin = Bundle(url: pluginURL)!
+            plugin.load()
+            let principle: AnyClass = plugin.principalClass!
+            let obj = principle.alloc()
+            obj.perform(Selector("test"))
+        }
+
         return true
     }
 
